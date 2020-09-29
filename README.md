@@ -28,7 +28,7 @@ abstract class PayU {
 	public static $language = SupportedLanguages::ES; # Idioma
 }
 ```
-**5.** en **[ruta/payu-php-sdk]/lib/PayU.php** baje a la ultima linea 
+**5.** en **[ruta/payu-php-sdk]/lib/PayU.php** baje y configure la ultima linea con el siguiente codigo
 ```php
 Environment::validate();
 # configure lo siguiente si el modo prueba($isTest) es true configure lo siguiente {
@@ -43,10 +43,10 @@ Environment::setSubscriptionsCustomUrl("https://api.payulatam.com/payments-api/r
 ```
 ## Pagos
 ### Tarjetas de crédito
-el siguiente codigo seria su index.php completo
+el siguiente codigo seria su **index.php** completo
 puede modificarlo enviado un post para cada campo 
-la $value el el precio 
-la $reference tiene que ser unica ya que con esa se identificara la transaccion 
+la **$value** es el precio 
+la **$reference** esta debe ser unica ya que con esa se identificara la transaccion 
 
 ```html
 <form method="post" action="">
