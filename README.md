@@ -1,12 +1,12 @@
 # SDK-Payu-Integration
-## PHP Integration
+## PHP SDK Integration
 ### Para integrar los SDK de PayU Latam siga los siguientes pasos
 
-**1.** Entre a su panel de [control](https://merchants.payulatam.com/#/login/auth) de **PayU**, si no tiene una cuenta en PayU puede [registrarse](https://merchants.payulatam.com/#/login/auth) gratis.
+**1.** Entre a su panel de [control](https://merchants.payulatam.com/#/login/auth) de **PayU**, si no tiene una cuenta en **PayU** puede [registrarse](https://merchants.payulatam.com/#/login/auth) gratis.
 
-**2.** Descargue el [SDK de PayU](http://developers.payulatam.com/es/sdk/)
+**2.** [Descargue](http://developers.payulatam.com/es/sdk/) el **SDK de PayU**
 
-**3.** incluya el SDK en su proyecto y vinculelo con su archivo principal o donde quiera usar las **SDK de Payu (Ejemplo: index.php, etc)**
+**3.** incluya el **SDK** en su proyecto y vinculelo con su archivo principal o donde quiera usar las **SDK de Payu (Ejemplo: index.php, etc)**
 ```php
 <?php
 require_once '[ruta/payu-php-sdk]/lib/PayU.php';
@@ -14,7 +14,7 @@ require_once '[ruta/payu-php-sdk]/lib/PayU.php';
 ?>
 ```
 
-**4.** vaya a **[ruta/payu-php-sdk]/lib/PayU.php** y configure la class PayU
+**4.** vaya a **[ruta/payu-php-sdk]/lib/PayU.php** y configure la **class PayU**
 ```php
 abstract class PayU {
 	const  API_VERSION = "4.0.1";
