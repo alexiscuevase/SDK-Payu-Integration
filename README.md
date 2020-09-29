@@ -43,6 +43,11 @@ Environment::setSubscriptionsCustomUrl("https://api.payulatam.com/payments-api/r
 ```
 ## Pagos
 ### Tarjetas de crédito
+el siguiente codigo seria su index.php completo
+puede modificarlo enviado un post para cada campo 
+la $value el el precio 
+la $reference tiene que ser unica ya que con esa se identificara la transaccion 
+
 ```html
 <form method="post" action="">
 	<input type="submit" name="card" value="Enviar">
@@ -53,6 +58,7 @@ Environment::setSubscriptionsCustomUrl("https://api.payulatam.com/payments-api/r
 require_once './lib/PayU.php';
 $reference = time();
 $value = 20000;
+etc..
 
 if (isset($_POST['card'])) {
 	$parameters = array(
@@ -140,6 +146,9 @@ if (isset($_POST['card'])) {
 
 	$response = PayUPayments::doAuthorizationAndCapture($parameters);
 	echo "<pre>".print_r($response)."</pre>";
+	if ($response) {
+		# si la respuesta se dio usted puede ejecutar aqui un codigo o insertar los valores a su base de datos
+	}
 }
 
 ?>
