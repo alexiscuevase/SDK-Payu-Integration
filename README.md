@@ -160,3 +160,4 @@ if (isset($_POST['card'])) {
 
 ?>
 ```
+consiga mas informacion sobre los [SDK-PAYU](http://developers.payulatam.com/es/sdk/payments.html)
