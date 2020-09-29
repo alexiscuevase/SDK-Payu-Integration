@@ -58,7 +58,6 @@ la $reference tiene que ser unica ya que con esa se identificara la transaccion
 require_once './lib/PayU.php';
 $reference = time();
 $value = 20000;
-etc..
 
 if (isset($_POST['card'])) {
 	$parameters = array(
@@ -122,7 +121,7 @@ if (isset($_POST['card'])) {
 		//Ingrese aquí el número de la tarjeta de crédito
 		PayUParameters::CREDIT_CARD_NUMBER => "4097440000000004",
 		//Ingrese aquí la fecha de vencimiento de la tarjeta de crédito
-		PayUParameters::CREDIT_CARD_EXPIRATION_DATE => "2014/12",
+		PayUParameters::CREDIT_CARD_EXPIRATION_DATE => "2021/01",
 		//Ingrese aquí el código de seguridad de la tarjeta de crédito
 		PayUParameters::CREDIT_CARD_SECURITY_CODE=> "321",
 		//Ingrese aquí el nombre de la tarjeta de crédito
@@ -145,9 +144,17 @@ if (isset($_POST['card'])) {
 	);
 
 	$response = PayUPayments::doAuthorizationAndCapture($parameters);
-	echo "<pre>".print_r($response)."</pre>";
+	echo "<pre>";
+	print_r($response);
+	echo "</pre>";
+
 	if ($response) {
 		# si la respuesta se dio usted puede ejecutar aqui un codigo o insertar los valores a su base de datos
+		# si quiere acceder a un valor especifico de la respuesta use ->
+		$code = $response->code;
+		$state = $response->transactionResponse->state;
+		echo "codigo: ".$code."<br>";
+		echo "estado de transacción: ".$state."<br>";
 	}
 }
 
