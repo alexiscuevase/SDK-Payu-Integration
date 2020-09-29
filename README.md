@@ -2,11 +2,11 @@
 ## PHP Integration
 ### Para integrar los SDK de PayU Latam siga los siguientes pasos
 
-**1.** Entre a su panel de [control](https://merchants.payulatam.com/#/login/auth) si no tiene una cuenta en PayU puede registrarse gratis.
+**1.** Entre a su panel de [control](https://merchants.payulatam.com/#/login/auth) de **PayU**, si no tiene una cuenta en PayU puede [registrarse](https://merchants.payulatam.com/#/login/auth) gratis.
 
 **2.** Descargue el [SDK de PayU](http://developers.payulatam.com/es/sdk/)
 
-**3.** incluya el SDK en su proyecto y vinculelo con su archivo principal **(Ejemplo: header.php, index.php, etc)**
+**3.** incluya el SDK en su proyecto y vinculelo con su archivo principal o donde quiera usar las **SDK de Payu (Ejemplo: index.php, etc)**
 ```php
 <?php
 require_once '[ruta/payu-php-sdk]/lib/PayU.php';
@@ -43,7 +43,7 @@ Environment::setSubscriptionsCustomUrl("https://api.payulatam.com/payments-api/r
 ```
 ## Pagos
 ### Tarjetas de crédito
-el siguiente codigo seria su **index.php** completo
+Asi se estaria viendo su archivo principal (**index.php**)
 puede modificarlo enviado un post para cada campo 
 la **$value** es el precio 
 la **$reference** esta debe ser unica ya que con esa se identificara la transaccion 
