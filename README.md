@@ -7,7 +7,7 @@
 **2.** Descargue el [SDK de PayU](http://developers.payulatam.com/es/sdk/)
 
 **3.** incluya el SDK en su proyecto y vinculelo con su archivo principal **(Ejemplo: header.php, index.php, etc)**
-      ```php
+      ```javascript
       <?php
       require_once '[carpeta-principal]/lib/PayU.php';
       ...
