@@ -21,10 +21,23 @@ abstract class PayU {
 	const  API_NAME = "PayU SDK";
 	const API_CODE_NAME = "PAYU_SDK";
 
-	public static $isTest = true; #[boolean] si esta en modo prueba coloque true
-	public static  $apiKey = "4Vj8eK4rloUd272L48hsrarnUA"; #[string] si el modo prueba es false(en produccion) la apiKey seria la de su panel administrativo 
-	public static  $apiLogin = "pRRXKOl8ikMmt9u"; #[string] si el modo prueba es false(en produccion) la apiLogin seria la de su panel administrativo
-	public static  $merchantId = 508029; #[string] si el modo prueba es false(en produccion) la merchantId seria la de su panel administrativo
-	public static $language = SupportedLanguages::ES; #Idioma
+	public static $isTest = true; # [boolean] si esta en modo prueba coloque true
+	public static  $apiKey = "4Vj8eK4rloUd272L48hsrarnUA"; # [string] si el modo prueba es false(en produccion) la apiKey seria la de su panel administrativo 
+	public static  $apiLogin = "pRRXKOl8ikMmt9u"; # [string] si el modo prueba es false(en produccion) la apiLogin seria la de su panel administrativo
+	public static  $merchantId = 508029; # [string] si el modo prueba es false(en produccion) la merchantId seria la de su panel administrativo
+	public static $language = SupportedLanguages::ES; # Idioma
 }
+```
+**5.** en **[ruta/payu-php-sdk]/lib/PayU.php** baje a la ultima linea 
+```php
+Environment::validate();
+# configure lo siguiente si el modo prueba($isTest) es true configure lo siguiente {
+Environment::setPaymentsCustomUrl("https://sandbox.api.payulatam.com/payments-api/4.0/service.cgi");
+Environment::setReportsCustomUrl("https://sandbox.api.payulatam.com/reports-api/4.0/service.cgi");
+Environment::setSubscriptionsCustomUrl("https://sandbox.api.payulatam.com/payments-api/rest/v4.9/");
+# } si el modo prueba es false configure lo siguiente{
+Environment::setPaymentsCustomUrl("https://api.payulatam.com/payments-api/4.0/service.cgi");
+Environment::setReportsCustomUrl("https://api.payulatam.com/reports-api/4.0/service.cgi");
+Environment::setSubscriptionsCustomUrl("https://api.payulatam.com/payments-api/rest/v4.9/");
+# }
 ```
