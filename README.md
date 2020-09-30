@@ -43,9 +43,10 @@ Environment::setSubscriptionsCustomUrl("https://api.payulatam.com/payments-api/r
 ```
 ## Pagos
 ### Tarjetas de crédito
-Asi se estaria viendo su archivo principal (**index.php**)
-puede modificarlo enviado un post para cada campo 
+Asi se estaria viendo su archivo principal (**index.php**), Puede modificarlo enviado un post para cada campo.
+
 la **$value** es el precio 
+
 la **$reference** esta debe ser unica ya que con esa se identificara la transaccion 
 
 ```html
